@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "genai-platform-dev",
+    "dev": "genai-platform-dev",
+    "staging": "genai-platform-staging",
+    "prod": "genai-platform-prod"
+  }
+}

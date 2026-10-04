@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenAI Platform</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --text: #f8fafc;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --success: #34d399;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, var(--bg), #1e293b);
+        color: var(--text);
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        max-width: 860px;
+        width: 100%;
+        background: rgba(17, 24, 39, 0.8);
+        border-radius: 18px;
+        padding: 32px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+      }
+      h1 {
+        margin-top: 0;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .stat {
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 12px;
+        padding: 16px;
+      }
+      .label {
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .value {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 8px;
+      }
+      button {
+        background: var(--accent);
+        color: #082f49;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #output {
+        margin-top: 16px;
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 10px;
+        padding: 14px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>GenAI Platform Control Center</h1>
+      <p>Firebase + GCP platform for user-level recommendations, embedded dashboards, and real-time GenAI generation.</p>
+
+      <div class="grid">
+        <div class="stat">
+          <div class="label">Env</div>
+          <div class="value" id="environment">dev</div>
+        </div>
+        <div class="stat">
+          <div class="label">Recommendations</div>
+          <div class="value" id="recommendationCount">5</div>
+        </div>
+        <div class="stat">
+          <div class="label">Looker</div>
+          <div class="value" id="lookerState">on</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 20px;">
+        <button id="syncButton">Sync remote config</button>
+      </div>
+
+      <div id="output">Loading configuration...</div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

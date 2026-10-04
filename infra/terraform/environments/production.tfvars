@@ -1,0 +1,8 @@
+project_id        = "genai-platform-prod"
+region            = "us-central1"
+zone              = "us-central1-a"
+environment       = "prod"
+billing_account   = "000000-000000-000000"
+org_id            = "000000000000"
+firebase_project_id = "genai-platform-prod"
+dataset_name      = "genai_platform_prod"

@@ -1,0 +1,28 @@
+{
+  "parameters": {
+    "genai_mode": {
+      "defaultValue": {
+        "value": "secure-generation"
+      },
+      "description": "Controls whether to use server-side secure generation or assisted UX mode"
+    },
+    "dashboard_experience": {
+      "defaultValue": {
+        "value": "balanced"
+      },
+      "description": "Defines the default dashboard style in the user experience"
+    },
+    "reco_limit": {
+      "defaultValue": {
+        "value": "5"
+      },
+      "description": "Recommendation count returned to the client"
+    },
+    "looker_enabled": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Flag to enable embedded Looker views for the current environment"
+    }
+  }
+}
